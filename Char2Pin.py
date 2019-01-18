@@ -7,6 +7,6 @@ pinyin(u'下雨天', strict=False)
 pinyin(u'下雨天', strict=False, style='NORMAL')
 lazy_pinyin(u'下雨天', strict=False, style='NORMAL')
 lazy_pinyin(u'下雨天', strict=False, style=pypinyin.NORMAL)
-s = '法轮功'
+s = '法轮'
 print(''.join(lazy_pinyin(s, strict=False, style=pypinyin.NORMAL)))
 
