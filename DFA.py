@@ -89,12 +89,12 @@ class DFA(object):
             while dict_cursor_index < len(msg) \
                     and dict_cursor.children is not None \
                     and msg[dict_cursor_index] in dict_cursor.children:
-                if dict_cursor.flag is True:
+                if dict_cursor.flag:
                     res.add(msg[msg_index:dict_cursor_index])
                 dict_cursor = dict_cursor.children[msg[dict_cursor_index]]
                 dict_cursor_index += 1
 
-            if dict_cursor.children is None:
+            if dict_cursor.flag:
                 res.add(msg[msg_index:dict_cursor_index])
                 if self.switch_memory:
                     self.message_memory.append(str(msg))
